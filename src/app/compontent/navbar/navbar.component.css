@@ -1,0 +1,38 @@
+/* Navbar styles */
+* {
+    font-family: cursive;
+  }
+  
+.navbar {
+    background-color: #6f8c55; /* Set a calm green color for the navbar */
+    height: 100px; /* Set the height of the navbar */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Distribute items at the start and end of the container */
+    padding: 0 20px; /* Add padding for spacing */
+}
+
+/* Logo styles */
+.logo {
+    max-width: 100px; /* Set the maximum width of the logo */
+    height: auto; /* Maintain aspect ratio */
+    color: white;
+}
+
+/* Styles for right content */
+.right-content {
+    display: flex;
+    align-items: center;
+    
+}
+.custom-button {
+    background-color: #6f8c55;
+    color: #bc1059;
+    font-size: 20px;
+    height: 55px;
+}
+.custom-button:hover{
+    color: #000;
+    font-size: 23px;
+
+}

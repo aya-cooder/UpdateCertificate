@@ -1,0 +1,30 @@
+
+<app-navbar></app-navbar>
+<div class="custom-select-content-wrapper">
+  <div class="custom-select-form-wrapper">
+    <h1 class="custom-select-heading">Custom select box</h1>
+    <form action="#">
+      <fieldset>
+        <select
+          id="componentSelector"
+          name="sources"
+          id="sources"
+          class="custom-select sources"
+          data-placeholder="Select box"
+          [(ngModel)]="selectedComponent"
+          (change)="onComponentChange()"
+        >
+          <option value="none">Select</option>
+          <option value="component3">Shipping</option>
+          <option value="component4">Re-shipping</option>
+        </select>
+      </fieldset>
+    </form>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+`

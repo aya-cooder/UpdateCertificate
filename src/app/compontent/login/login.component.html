@@ -1,0 +1,45 @@
+<div class="login d-flex justify-content-center align-items-center m-auto">
+    <div class="row">
+      <div class="col-md-6 p-0">
+        <div class="overlay"></div>
+        <img class="logo" src="../assets/images/login/c0h2_mhx6_220227.jpg" alt="Logo">
+      </div>
+      <div class="col-md-6">
+        <div class="h-100 d-flex align-items-center justify-content-center w-100">
+          <div class="box w-75">
+            <h2>Login </h2>
+            <form [formGroup]="LoginForm" (ngSubmit)="login()">
+              <!-- Inside your form -->
+    <div class="mb-3">
+     <label for="userName" class="form-label">userName</label>
+     <input type="text" class="form-control" formControlName="userName" id="userName" placeholder="userName" required>
+    <small *ngIf="userName.invalid && (userName.dirty || userName.touched)" class="block p-error">
+    <div *ngIf="userName.errors?.['required']" class="error-text">UserName is required </div>
+    </small>
+ </div>
+
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="{{ showPassword ? 'text' : 'password' }}" class="form-control" formControlName="password" id="password" placeholder="password" required>
+                <small *ngIf="password.invalid && (password.dirty || password.touched)" class="block p-error">
+                  <div *ngIf="password.errors?.['required']" class="error-text">Password is required</div>
+                </small>
+                  <div class="d-flex justify-content-end  ">
+                    <mat-checkbox class="custom-checkbox" (change)="togglePasswordVisibility()">
+                      <span style="color: #6f8c55;">Show Password</span></mat-checkbox>
+                  </div>           
+                   </div>
+                   
+                   <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-warning custom-button" 
+                    [disabled]="LoginForm.invalid"
+                    (click)="login()">Login</button>
+                  </div>
+                  
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
