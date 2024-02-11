@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
           if (res.roles && res.roles.length > 0) {
             this.handleRoles(res.roles);
           } else {
-            console.error('No roles received from the backend.');
+            console.error('Not roles received from the backend.');
           }
         } else {
           console.error('Invalid response from the server.');
