@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* =========================================
+HOME PAGE
+========================================= */
+
+:host {
+display: block;
+min-height: 100vh;
+font-family: 'Poppins', sans-serif;
+}
+
+/* =========================================
+Main Content
+========================================= */
+
+.custom-select-content-wrapper {
+width: 100%;
+min-height: calc(100vh - 70px);
+
+padding: 45px 25px 60px;
+
+background-color: #00AFA3;
+
+font-family: 'Poppins', sans-serif;
+}
+
+/* =========================================
+Select Section
+========================================= */
+
+.custom-select-form-wrapper {
+width: 100%;
+max-width: 850px;
+
+margin: 0 auto 40px;
+
+padding: 30px 35px;
+
+background-color: rgba(255, 255, 255, 0.96);
+
+border: 2px solid rgba(159, 107, 4, 0.45);
+
+border-radius: 14px;
+
+box-shadow:
+0 10px 20px rgba(187, 146, 65, 0.55);
+}
+
+/* =========================================
+Heading
+========================================= */
+
+.custom-select-heading {
+margin: 0 0 25px;
+
+text-align: center;
+
+color: #203647;
+
+font-size: 28px;
+font-weight: 700;
+
+letter-spacing: 0.5px;
+
+text-transform: uppercase;
+}
+
+/* =========================================
+Form
+========================================= */
+
+.custom-select-form {
+width: 100%;
+}
+
+.custom-select-form fieldset {
+width: 100%;
+
+margin: 0;
+padding: 0;
+
+border: none;
+}
+
+/* =========================================
+Select Box
+========================================= */
+
+.custom-select-form select {
+width: 100%;
+height: 55px;
+
+padding: 0 18px;
+
+border: 2px solid #ddd;
+border-radius: 9px;
+
+outline: none;
+
+background-color: #ffffff;
+
+color: #333;
+
+font-family: 'Poppins', sans-serif;
+
+font-size: 15px;
+font-weight: 500;
+
+cursor: pointer;
+
+appearance: auto;
+
+transition:
+border-color 0.25s ease,
+box-shadow 0.25s ease,
+background-color 0.25s ease;
+}
+
+.custom-select-form select:hover {
+border-color: #bb9241;
+}
+
+.custom-select-form select:focus {
+border-color: #00AFA3;
+
+box-shadow:
+0 0 0 3px rgba(0, 175, 163, 0.15);
+}
+
+/* =========================================
+Select Options
+========================================= */
+
+.custom-select-form select option {
+padding: 10px;
+
+background-color: #ffffff;
+
+color: #333;
+
+font-family: 'Poppins', sans-serif;
+}
+
+/* =========================================
+Component Section
+========================================= */
+
+.component-wrapper {
+width: 100%;
+max-width: 1400px;
+
+margin: 0 auto;
+}
+
+.component-wrapper app-get-all-update {
+display: block;
+width: 100%;
+}
+
+/* =========================================
+Tablet
+========================================= */
+
+@media (max-width: 992px) {
+
+.custom-select-content-wrapper {
+padding: 35px 20px 50px;
+}
+
+.custom-select-form-wrapper {
+max-width: 750px;
+
+
+padding: 28px 30px;
+
+margin-bottom: 35px;
+
+
+}
+
+.custom-select-heading {
+font-size: 25px;
+}
+
+}
+
+/* =========================================
+Mobile
+========================================= */
+
+@media (max-width: 768px) {
+
+.custom-select-content-wrapper {
+min-height: calc(100vh - 60px);
+
+
+padding: 25px 15px 40px;
+
+
+}
+
+.custom-select-form-wrapper {
+width: 100%;
+
+
+margin-bottom: 25px;
+
+padding: 23px 20px;
+
+border-radius: 11px;
+
+
+}
+
+.custom-select-heading {
+margin-bottom: 20px;
+
+font-size: 21px;
+
+letter-spacing: 0.3px;
+
+
+}
+
+.custom-select-form select {
+height: 50px;
+
+
+padding: 0 13px;
+
+font-size: 14px;
+
+border-radius: 8px;
+
+
+}
+
+}
+
+/* =========================================
+Small Mobile
+========================================= */
+
+@media (max-width: 480px) {
+
+.custom-select-content-wrapper {
+padding: 20px 12px 30px;
+}
+
+.custom-select-form-wrapper {
+padding: 20px 15px;
+
+
+border-width: 1px;
+
+box-shadow:
+  0 7px 15px rgba(187, 146, 65, 0.45);
+
+
+}
+
+.custom-select-heading {
+font-size: 18px;
+
+margin-bottom: 17px;
+
+}
+
+.custom-select-form select {
+height: 47px;
+
+
+font-size: 13px;
+
+
+}
+
+}
+
+/* =========================================
+Very Small Screens
+========================================= */
+
+@media (max-width: 350px) {
+
+.custom-select-content-wrapper {
+padding: 15px 10px 25px;
+}
+
+.custom-select-form-wrapper {
+padding: 18px 12px;
+}
+
+.custom-select-heading {
+font-size: 16px;
+}
+
+.custom-select-form select {
+height: 45px;
+
+
+padding: 0 10px;
+
+font-size: 12px;
+
+
+}
+
+}

@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* =========================================
+UPDATE KAMEL PAGE
+========================================= */
+
+:host {
+display: block;
+min-height: 100vh;
+font-family: 'Poppins', sans-serif;
+}
+
+/* =========================================
+Main Page
+========================================= */
+
+.custom-select-content-wrapper {
+width: 100%;
+min-height: calc(100vh - 75px);
+
+display: flex;
+justify-content: center;
+align-items: flex-start;
+
+padding: 50px 20px 60px;
+
+background-color: #00AFA3;
+
+font-family: 'Poppins', sans-serif;
+}
+
+/* =========================================
+Main Card
+========================================= */
+
+.custom-select-form-wrapper {
+width: 100%;
+max-width: 850px;
+
+padding: 35px 40px 40px;
+
+background-color: rgba(255, 255, 255, 0.96);
+
+border: 2px solid rgba(159, 107, 4, 0.45);
+
+border-radius: 14px;
+
+box-shadow:
+0 10px 20px rgba(187, 146, 65, 0.55);
+
+text-align: center;
+
+animation: updateFadeIn 0.5s ease;
+}
+
+/* =========================================
+Page Heading
+========================================= */
+
+.custom-select-heading {
+margin: 0 0 30px;
+
+color: #203647;
+
+font-size: 28px;
+font-weight: 700;
+
+text-transform: uppercase;
+
+letter-spacing: 0.5px;
+
+text-shadow:
+0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================
+Upload Container
+========================================= */
+
+.container {
+width: 100%;
+
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* =========================================
+Material Card
+========================================= */
+
+mat-card {
+width: 100%;
+max-width: 650px;
+
+padding: 30px;
+
+background-color: #ffffff;
+
+border: 1px solid #e2e6e8;
+
+border-radius: 11px;
+
+box-shadow:
+0 5px 15px rgba(0, 0, 0, 0.10);
+
+box-sizing: border-box;
+}
+
+/* =========================================
+Card Content
+========================================= */
+
+.card-content {
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+
+justify-content: center;
+
+text-align: center;
+}
+
+/* =========================================
+Card Heading
+========================================= */
+
+.card-content h1 {
+width: 100%;
+
+margin: 0 0 25px;
+
+color: #203647;
+
+font-size: 20px;
+font-weight: 600;
+
+line-height: 1.5;
+}
+
+.card-content h1 span {
+color: #b48339 !important;
+
+font-weight: 700;
+}
+
+/* =========================================
+Upload Wrapper
+========================================= */
+
+.upload-btn-wrapper {
+width: 100%;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+}
+
+/* =========================================
+File Input
+========================================= */
+
+input[type="file"] {
+width: 100%;
+
+height: 50px;
+
+margin-bottom: 18px;
+
+padding: 8px 12px;
+
+border: 2px solid #ddd;
+
+border-radius: 8px;
+
+outline: none;
+
+background-color: #f8fafb;
+
+color: #555;
+
+font-family: 'Poppins', sans-serif;
+
+font-size: 13px;
+
+cursor: pointer;
+
+box-sizing: border-box;
+
+transition:
+border-color 0.25s ease,
+box-shadow 0.25s ease,
+background-color 0.25s ease;
+}
+
+input[type="file"]:hover {
+border-color: #bb9241;
+}
+
+input[type="file"]:focus {
+border-color: #00AFA3;
+
+box-shadow:
+0 0 0 3px rgba(0, 175, 163, 0.12);
+}
+
+/* =========================================
+Upload Button
+========================================= */
+
+.btn {
+width: 100%;
+
+height: 50px;
+
+padding: 10px 20px;
+
+border: 1px solid #a9742b;
+
+border-radius: 8px;
+
+background-color: #00AFA3;
+
+color: #ffffff;
+
+font-family: 'Poppins', sans-serif;
+
+font-size: 15px;
+
+font-weight: 600;
+
+cursor: pointer;
+
+box-shadow:
+0 4px 8px rgba(187, 146, 65, 0.25);
+
+transition:
+background-color 0.25s ease,
+transform 0.2s ease,
+box-shadow 0.25s ease;
+}
+
+.btn:hover {
+background-color: #008f86;
+
+transform: translateY(-2px);
+
+box-shadow:
+0 7px 14px rgba(187, 146, 65, 0.35);
+}
+
+.btn:active {
+transform: translateY(0);
+
+box-shadow:
+0 3px 6px rgba(187, 146, 65, 0.25);
+}
+
+/* =========================================
+Alerts
+========================================= */
+
+.alert-message {
+width: 100%;
+
+padding: 12px 15px;
+
+margin-bottom: 15px;
+
+border: 1px solid #d6e9c6;
+
+border-radius: 7px;
+
+color: #3c763d;
+
+background-color: #dff0d8;
+
+font-size: 13px;
+
+box-sizing: border-box;
+}
+
+.error-message {
+color: #a94442;
+
+background-color: #f2dede;
+
+border-color: #ebccd1;
+}
+
+.success-message {
+color: #3c763d;
+
+background-color: #dff0d8;
+
+border-color: #d6e9c6;
+}
+
+/* =========================================
+Animation
+========================================= */
+
+@keyframes updateFadeIn {
+
+from {
+opacity: 0;
+
+transform: translateY
+
+}
+
+to {
+opacity: 1;
+
+
+transform: translateY(0);
+
+
+}
+
+}
+
+/* =========================================
+Tablet
+========================================= */
+
+@media (max-width: 768px) {
+
+.custom-select-content-wrapper {
+min-height: calc(100vh - 68px);
+
+padding: 35px 18px 45px;
+
+
+}
+
+.custom-select-form-wrapper {
+max-width: 700px;
+
+
+padding: 30px 25px 35px;
+
+
+}
+
+.custom-select-heading {
+font-size: 24px;
+
+
+margin-bottom: 25px;
+
+
+}
+
+mat-card {
+padding: 25px;
+}
+
+.card-content h1 {
+font-size: 18px;
+}
+
+}
+
+/* =========================================
+Mobile
+========================================= */
+
+@media (max-width: 480px) {
+
+.custom-select-content-wrapper {
+min-height: calc(100vh - 62px);
+
+
+padding: 25px 12px 35px;
+
+
+}
+
+.custom-select-form-wrapper {
+width: 100%;
+
+
+padding: 25px 16px 30px;
+
+border-radius: 11px;
+
+border-width: 1px;
+
+box-shadow:
+  0 7px 15px rgba(187, 146, 65, 0.45);
+
+
+}
+
+.custom-select-heading {
+margin-bottom: 22px;
+
+
+font-size: 20px;
+
+letter-spacing: 0.2px;
+
+
+}
+
+mat-card {
+padding: 20px 15px;
+
+
+border-radius: 9px;
+
+
+}
+
+.card-content h1 {
+margin-bottom: 20px;
+
+
+font-size: 16px;
+
+
+}
+
+input[type="file"] {
+height: auto;
+
+
+min-height: 47px;
+
+margin-bottom: 15px;
+
+padding: 8px;
+
+font-size: 12px;
+
+
+}
+
+.btn {
+height: 47px;
+
+
+font-size: 14px;
+
+
+}
+
+}
+
+/* =========================================
+Very Small Mobile
+========================================= */
+
+@media (max-width: 350px) {
+
+.custom-select-content-wrapper {
+padding: 20px 10px 30px;
+}
+
+.custom-select-form-wrapper {
+padding: 22px 12px 27px;
+}
+
+.custom-select-heading {
+font-size: 18px;
+}
+
+mat-card {
+padding: 18px 12px;
+}
+
+.card-content h1 {
+font-size: 14px;
+}
+
+.btn {
+height: 44px;
+
+
+font-size: 13px;
+
+
+}
+
+}

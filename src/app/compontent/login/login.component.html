@@ -1,0 +1,91 @@
+<div class="login-page">
+  <div class="login-card">
+
+<!-- Logo -->
+<div class="login-logo">
+  <img
+    src="../../../assets/images/header/logo.png"
+    alt="Logo"
+  />
+</div>
+
+<!-- Header -->
+<div class="login-header">
+  <h1>Welcome Back</h1>
+  <p>Please login to your account</p>
+</div>
+
+<!-- Form -->
+<form [formGroup]="LoginForm" (ngSubmit)="login()" class="login-form">
+
+  <!-- Username -->
+  <div class="form-group">
+    <label for="userName">
+      Username
+      <span class="required">*</span>
+    </label>
+
+    <input
+      id="userName"
+      type="text"
+      formControlName="userName"
+      placeholder="Enter your username"
+      autocomplete="username"
+    />
+
+    <small
+      *ngIf="userName.invalid && (userName.dirty || userName.touched)"
+      class="error-message"
+    >
+      <span *ngIf="userName.errors?.['required']">
+        Username is required
+      </span>
+    </small>
+  </div>
+
+  <!-- Password -->
+  <div class="form-group">
+    <label for="password">
+      Password
+      <span class="required">*</span>
+    </label>
+
+    <input
+      id="password"
+      [type]="showPassword ? 'text' : 'password'"
+      formControlName="password"
+      placeholder="Enter your password"
+      autocomplete="current-password"
+    />
+
+    <small
+      *ngIf="password.invalid && (password.dirty || password.touched)"
+      class="error-message"
+    >
+      <span *ngIf="password.errors?.['required']">
+        Password is required
+      </span>
+    </small>
+
+    <label class="password-toggle">
+      <mat-checkbox
+        (change)="togglePasswordVisibility()"
+      >
+        Show Password
+      </mat-checkbox>
+    </label>
+  </div>
+
+  <!-- Login Button -->
+  <button
+    type="submit"
+    class="login-button"
+    [disabled]="LoginForm.invalid"
+  >
+    Login
+  </button>
+
+</form>
+
+  </div>
+</div>

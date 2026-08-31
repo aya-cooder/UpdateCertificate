@@ -1,0 +1,147 @@
+/* Table styles */
+:host ::ng-deep table thead {
+    background-color: #00AFA3 !important;
+    border-collapse: collapse;
+    height: 30px;
+    color: #fff;
+    margin-top: 20px; 
+}
+
+:host ::ng-deep table thead .mat-header-cell {
+    color: #fff;
+}
+
+th {
+    color: #fff;
+    font-size: 20px;
+}
+
+::ng-deep [mat-row]:nth-child(even) {
+    height: 30px;
+    background-color: rgba(0, 179, 166, 0.04);
+}
+
+.w-20 {
+    width: 20% !important;
+}
+
+.listBox {
+    margin-top: 20px; 
+    margin-left: 20px; 
+    margin-right: 20px; 
+}
+
+.listBox .d-flex {
+    justify-content: center;
+}
+
+.mat-elevation-z8 {
+    max-width: 900px; 
+    width: 100%;
+    margin-top: 20px; 
+    background-color: #fff;
+}
+form {
+    margin-top: 20px; 
+    padding-left: 20px; 
+    padding-right: 20px; 
+}
+
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.mat-form-field {
+    width: calc(50% - 10px); 
+    margin-right: 10px;
+}
+
+.mat-form-field + label {
+    color: #333; 
+}
+.form-control{
+    line-height: 2.5;
+}
+
+.btn-secondary {
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+.addTask {
+    margin-right: 20px; 
+}
+
+.mat-mdc-cell {
+    font-size: 16px;
+}
+
+.date {
+    height: 60px;
+    width: calc(50% - 16px); 
+    color: #333;
+    padding-right: 8px;
+    font-size: 17px;
+    border-radius: 5px;
+    border-color: #ccc;
+}
+#userSelect {
+
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    appearance: none; /* Removes default arrow */
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Adjusts the position of the arrow */
+    background-size: 12px 12px; /* Adjusts the size of the arrow */
+    outline: none;
+}
+
+#userSelect:focus {
+    border-color: #3498db;
+}
+.toggle-arrow {
+    cursor: pointer;
+    padding-left: 5px;
+    vertical-align: middle;
+    color: #007bff;
+  }
+  
+  .toggle-arrow:hover {
+    color: #0056b3;
+  }
+  
+  .material-icons {
+    vertical-align: middle;
+  }
+ /* Styles for the file download section */
+.file-download-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .file-path {
+    margin-left: 10px;
+  }
+  
+  .file-path a {
+    color: #007bff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .file-path a:hover {
+    text-decoration: underline;
+  }
+  
+  .file-path mat-icon {
+    margin-right: 5px;
+  }
+  .download{
+    color: #007bff;
+  }
+  

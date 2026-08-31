@@ -1,0 +1,122 @@
+<!-- <div class="container mt-4">
+  <div class="card p-4 mx-auto" style="width: 90%;">
+      <form>
+          <div class="row">
+              <div class="row">
+                  <div class="col-md-6">
+                      <select id="userSelect" class="form-control" (change)="search($event)">
+                          <option value="none">Select User</option>
+                          <option *ngFor="let user of userNames" [value]="user.value">{{ user.viewValue }}</option>
+                      </select>
+                  </div>
+
+                  <div class="col-md-6">
+                    <input matInput type="date" id="addedDateFilter" placeholder="Date Filter" class="form-control" (change)="onDateFilterChange($event)" #date>
+                </div>
+              </div>
+          </div>
+      </form>
+   
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 w-100">
+       
+          <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef> ID </th>
+              <td mat-cell *matCellDef="let element"> {{ element.id }} </td>
+          </ng-container>
+
+  
+          <ng-container matColumnDef="userName">
+              <th mat-header-cell *matHeaderCellDef> User Name </th>
+              <td mat-cell *matCellDef="let element"> {{ element.userName }} </td>
+          </ng-container>
+
+       
+          <ng-container matColumnDef="updatedAt">
+              <th mat-header-cell *matHeaderCellDef> Updated At </th>
+              <td mat-cell *matCellDef="let element"> {{ element.updatedAt | date:'M/d/yyyy, h:mm a' }} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="recordsUpdated">
+              <th mat-header-cell *matHeaderCellDef> Records Updated </th>
+              <td mat-cell *matCellDef="let element"> {{ element.recordsUpdated }} </td>
+          </ng-container>
+
+        
+          <ng-container matColumnDef="fileContentpath">
+              <th mat-header-cell *matHeaderCellDef> File Content Path </th>
+              <td mat-cell *matCellDef="let element">
+                  <a  (click)="toggleUrlVisibility(element.id)">
+                     
+                      <span *ngIf="!urlVisibility[element.id]">&#x25BC;</span>
+                      <span *ngIf="urlVisibility[element.id]">&#x25B2;</span>
+                  </a>
+                  <div *ngIf="urlVisibility[element.id]">
+                      <a href="javascript:void(0)" (click)="viewFilePath(element.fileContentpath)">
+                          {{ element.fileContentpath }}
+                      </a>
+                  </div>
+              </td>
+          </ng-container>
+
+       
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+  </div>
+</div> -->
+
+ <div class="container mt-4">
+    <div class="card p-4 mx-auto" style="width: 90%;">
+      <form>
+        <div class="row">
+          <div class="col-md-6">
+            <select id="userSelect" class="form-control" (change)="search($event)">
+              <option value="none">Select User</option>
+              <option *ngFor="let user of userNames" [value]="user.value">{{ user.viewValue }}</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <input matInput type="date" id="addedDateFilter" placeholder="Date Filter" class="form-control" (change)="onDateFilterChange($event)" #date>
+          </div>
+        </div>
+      </form>
+      <div *ngIf="!isUserSelected" class="alert alert-info">
+        {{ noUserSelectedMessage }}
+      </div>
+      <div *ngIf="noUpdatesMessage" class="alert alert-warning">
+        {{ noUpdatesMessage }}
+      </div>
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 w-100">
+        <ng-container matColumnDef="username">
+          <th mat-header-cell *matHeaderCellDef> Username </th>
+          <td mat-cell *matCellDef="let element"> {{ element.username }} </td>
+        </ng-container>
+        <ng-container matColumnDef="updatedat">
+          <th mat-header-cell *matHeaderCellDef> Updated At </th>
+          <td mat-cell *matCellDef="let element"> {{ element.updatedat | date: 'M/d/yyyy, h:mm a' }} </td>
+        </ng-container>
+        <ng-container matColumnDef="recordscount">
+          <th mat-header-cell *matHeaderCellDef> Records Count </th>
+          <td mat-cell *matCellDef="let element"> {{ element.recordscount }} </td>
+        </ng-container>
+        <ng-container matColumnDef="fileDownloadUrl">
+            <th mat-header-cell *matHeaderCellDef>File Download</th>
+            <td mat-cell *matCellDef="let element">
+              <div class="file-download-section">
+                <a (click)="toggleUrlVisibility(element.id)" aria-label="Toggle URL visibility" mat-button>
+                    <mat-icon  class="download" >file_download</mat-icon>
+                </a>
+                <div *ngIf="urlVisibility[element.id]" class="file-path">
+                  <a href="javascript:void(0)" (click)="downloadFile(element.fileDownloadUrl)" mat-button>
+                    {{ element.filePath }}
+                  </a>
+                </div>
+              </div>
+            </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </div> 
+  

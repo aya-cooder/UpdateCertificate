@@ -1,0 +1,31 @@
+
+<div class="custom-select-content-wrapper">
+    <app-header></app-header>
+   
+     <div class="custom-select-form-wrapper">
+       <h1 class="custom-select-heading">Custom Select Box</h1>
+       <form class="custom-select-form" action="#">
+         <fieldset>
+           <select
+             id="componentSelector"
+             name="sources"
+             id="sources"
+             class="custom-select sources"
+             data-placeholder="Select box"
+             [(ngModel)]="selectedComponent"
+             (change)="onComponentChange()"
+           >
+             <option value="none">Select</option>
+             <option value="component3">Re_print</option>
+             <option value="component4">Print_NotPaid</option>
+           </select>
+         </fieldset>
+       </form>
+       <div>
+         <router-outlet></router-outlet>
+       </div>
+     </div>
+   </div>
+   
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+   

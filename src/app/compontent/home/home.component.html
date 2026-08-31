@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="custom-select-content-wrapper">
+
+  <div class="custom-select-form-wrapper">
+    <h1 class="custom-select-heading">Custom Select Box</h1>
+    <form class="custom-select-form" action="#">
+      <fieldset>
+        <select
+          id="componentSelector"
+          name="sources"
+          class="custom-select sources"
+          data-placeholder="Select box"
+          [(ngModel)]="selectedComponent"
+          (change)="onComponentChange()"
+        >
+          <option value="none">Select</option>
+          <option value="component1">Kamel</option>
+          <option value="component2">Lara</option>
+          <option value="component3">Shipping</option>
+          <option value="component4">Re-shipping</option>
+          <option value="component5">Print_NotPaid</option>
+          <option value="component6">Shipping_NotPaid</option>
+          <option value="component7">Mortg3_NEW_ORDERS</option>
+          <option value="component8">Mortg3_Re_ORDERS</option>
+
+
+
+        </select>
+      </fieldset>
+    </form>
+  </div>
+
+  <div class="component-wrapper">
+    <app-get-all-update></app-get-all-update>
+  </div>
+</div>
